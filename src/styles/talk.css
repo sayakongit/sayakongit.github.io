@@ -1,0 +1,39 @@
+.talk p {
+  @apply leading-7;
+}
+
+.talk code {
+  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-orange-500;
+}
+
+.talk h2 {
+  @apply mt-6 text-3xl text-neutral-100;
+}
+
+.talk h3 {
+  @apply mt-4 text-xl text-neutral-100;
+}
+
+.talk code {
+  @apply rounded-sm bg-neutral-800 px-1 py-[2px] text-red-500;
+}
+
+.talk a {
+  @apply text-neutral-100 underline;
+}
+
+.talk ul {
+  @apply list-disc;
+}
+
+.talk blockquote {
+  @apply flex flex-row gap-2 before:block before:h-auto before:w-1 before:max-w-[1px] before:bg-red-400 before:content-[''];
+}
+
+.talk pre {
+  @apply p-4;
+}
+
+.talk pre > code {
+  @apply bg-transparent;
+}

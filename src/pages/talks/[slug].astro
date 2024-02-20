@@ -1,0 +1,34 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import formatDate from "@/utils/formatDate";
+
+export async function getStaticPaths() {
+  const talks = await getCollection("talks");
+
+  return talks.map((talk) => ({
+    params: { slug: talk.slug },
+    props: { talk },
+  }));
+}
+
+type Props = {
+  talk: CollectionEntry<"talks">;
+};
+
+const { talk } = Astro.props;
+const { Content } = await talk.render();
+---
+
+<Layout title={talk.data.title} description={talk.data.description}>
+  <main class="talk mx-auto flex w-full max-w-prose flex-col gap-4">
+    <header role="presentation">
+      <h1 class="text-md">
+        {talk.data.title} - {formatDate(talk.data.publishedAt)}
+      </h1>
+      <p class="italic">{talk.data.description}</p>
+    </header>
+
+    <Content />
+  </main>
+</Layout>
