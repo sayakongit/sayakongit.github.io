@@ -17,6 +17,7 @@ export default defineConfig({
     }
   },
   redirects: {
+    '/meet': 'https://meet.google.com/jyq-kcdr-uqc',
     '/talks/deconstructing-the-monolith': 'https://docs.google.com/presentation/d/1dl3hP_eDORShqzBBAja03Ou9dhy5kACE-LyJHn6n72c'
   }
 });
