@@ -15,5 +15,8 @@ export default defineConfig({
       theme: "nord",
       wrap: false
     }
+  },
+  redirects: {
+    '/talks/deconstructing-the-monolith': 'https://docs.google.com/presentation/d/1dl3hP_eDORShqzBBAja03Ou9dhy5kACE-LyJHn6n72c'
   }
 });
